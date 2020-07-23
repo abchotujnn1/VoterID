@@ -1,7 +1,7 @@
 import os
 import os.path
 import pytesseract
-pytesseract.pytesseract.tesseract_cmd = ‘/app/.apt/usr/bin/tesseract’
+pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 import re
 from PIL import Image
 from flask import Flask,jsonify,request,render_template
