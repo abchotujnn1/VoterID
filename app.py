@@ -1,15 +1,18 @@
 import os
 import os.path
 import pytesseract
+pytesseract.pytesseract.tesseract_cmd = ‘/app/.apt/usr/bin/tesseract’
 import re
 from PIL import Image
 from flask import Flask,jsonify,request,render_template
 from werkzeug.utils import secure_filename
 
+
 app=Flask(__name__)
 UPLOAD_FOLDER='./uploads'
 app.config['UPLOAD_FOLDER']=UPLOAD_FOLDER
 
+ 
 def get_name(text):
     # Initializing data variable
     name = None
